@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Test SearchBar</title>
+		<meta charset="UTF-8">
+	</head>
+	
+	<body>
+		<span class = "searchBar" title = "Apple"></span>
+		
+		<span class = "searchBar" title = "Pear"></span>
+		
+		<span class = "searchBar" title = "Orange"></span>
+		
+		<script>
+			(function(){
+				'use strict';
+				
+				var bar = document.getElementsByClassName("searchBar");
+				
+				for(var i = 0; i < bar.length; i++){
+					var search = document.createElement('input');
+					search.setAttribute("type", "text");
+					
+					var but = document.createElement('input');
+					but.setAttribute("type", "button");
+					but.value =  bar[i].title;
+					
+					bar[i].appendChild(search);
+					bar[i].appendChild(but);
+					
+					
+					
+					
+				}
+				
+			}
+			)();
+		</script>
+		<style>
+			.searchBar{
+				display: block;
+				width: 100%;
+				margin: 50px;
+			}
+			.searchBar > input{
+				margin: 5px;
+				width: 200px;
+			}
+		</style>
+	</body>
+
+</html>
+
